@@ -8,7 +8,7 @@ function Login() {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log("Login Attempt:", { username, password });
-    alert("Login attempt with username: " + username);
+    alert(`Login attempt with username: ${username}`);
   };
 
   return (
