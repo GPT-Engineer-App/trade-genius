@@ -29,6 +29,7 @@ const Index = () => {
                 <Th>Price</Th>
                 <Th>Market Cap</Th>
                 <Th>High/Low</Th>
+                <Th>Actions</Th>
               </Tr>
             </Thead>
             <Tbody>
@@ -39,6 +40,14 @@ const Index = () => {
                 <Td>$50</Td>
                 <Td>$50000</Td>
                 <Td>$55/$45</Td>
+                <Td>
+                  <Button size="sm" colorScheme="blue" mr={2}>
+                    Buy
+                  </Button>
+                  <Button size="sm" colorScheme="red">
+                    Sell
+                  </Button>
+                </Td>
               </Tr>
               {/* More rows can be added here */}
             </Tbody>
@@ -101,14 +110,14 @@ const Index = () => {
             <FormControl id="deposit" mb={4}>
               <FormLabel>Deposit Amount</FormLabel>
               <Input type="number" placeholder="Enter amount" />
-              <Button mt={2} leftIcon={<FaDollarSign />} colorScheme="green">
+              <Button mt={2} leftIcon={<FaDollarSign />} colorScheme="green" onClick={() => alert("Deposit successful")}>
                 Deposit
               </Button>
             </FormControl>
             <FormControl id="withdraw">
               <FormLabel>Withdraw Amount</FormLabel>
               <Input type="number" placeholder="Enter amount" />
-              <Button mt={2} leftIcon={<FaExchangeAlt />} colorScheme="red">
+              <Button mt={2} leftIcon={<FaExchangeAlt />} colorScheme="red" onClick={() => alert("Withdrawal successful")}>
                 Withdraw
               </Button>
             </FormControl>
